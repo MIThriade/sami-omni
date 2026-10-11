@@ -8,8 +8,8 @@
 
 Developed by **Valentin Spiridon / TSV Consulting SRL** (Timișoara, Romania; ORCID: [0009-0000-2336-8527](https://orcid.org/0009-0000-2336-8527)) as part of the *MIThriade / Synapsa Ecosystem*.
 
-* 📄 **Technical Report (Full Proofs & Benchmarks):** [doi.org/10.5281/zenodo.23293547](https://doi.org/10.5281/zenodo.23293547)
-* 📦 **Model Checkpoints (GGUF Binaries):** [huggingface.co/MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ](https://huggingface.co/MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ)
+*  **Technical Report (Full Proofs & Benchmarks):** [doi.org/10.5281/zenodo.23293547](https://doi.org/10.5281/zenodo.23293547)
+*  **Model Checkpoints (GGUF Binaries):** [huggingface.co/MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ](https://huggingface.co/MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ)
 
 ---
 
@@ -50,7 +50,7 @@ Autoregressive token generation in host memory is memory-bandwidth bound rather 
 
 ---
 
-## 🔬 Core Innovations
+##  Core Innovations
 
 1. **Granular Feature Surgery on MoE Feed-Forward Projections:**
    Analyzes all 4,718,592 candidate expert down-projection columns across the network ($48\text{ layers} \times 128\text{ experts} \times 768\text{ intermediate dimensions}$). Surgically zeros out **6,259 refusal-correlated columns (0.13%)** identified through contrastive activation projection, eliminating boilerplate preachy refusal sequences.
@@ -65,7 +65,7 @@ Autoregressive token generation in host memory is memory-bandwidth bound rather 
 
 ---
 
-## 📊 Cognitive Reasoning Retention (Delta Benchmarks)
+##  Cognitive Reasoning Retention (Delta Benchmarks)
 
 Empirical evaluation against the baseline unpruned BF16 model confirms that 0.13% column ablation and Procrustes alignment preserve reasoning faculties within sub-0.6% variance:
 
@@ -79,7 +79,7 @@ Empirical evaluation against the baseline unpruned BF16 model confirms that 0.13
 
 ---
 
-## 📈 Context Length Scaling (GTX 1060 6GB)
+##  Context Length Scaling (GTX 1060 6GB)
 
 | Context Length | TTFT | Generation Speed | Active KV Cache Size | Total VRAM Footprint | Free VRAM Headroom |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -90,7 +90,7 @@ Empirical evaluation against the baseline unpruned BF16 model confirms that 0.13
 
 ---
 
-## 🚀 Quickstart: Deployment & Inference
+##  Quickstart: Deployment & Inference
 
 ### 1. Download Model Checkpoints
 Download the GGUF binaries from Hugging Face:
@@ -132,7 +132,7 @@ python client_example.py --image test_diagram.jpg --prompt "Analyze the architec
 
 ---
 
-## 📜 Citation
+##  Citation
 
 If you use or build upon SAMI Omni in your research or benchmarks, please cite the official Technical Report:
 
@@ -150,7 +150,7 @@ If you use or build upon SAMI Omni in your research or benchmarks, please cite t
 
 ---
 
-## ⚖️ License and Terms of Use
+##  License and Terms of Use
 
 * **Model Weights & Client Code:** Released under the [Apache-2.0 License](LICENSE).
 * **Disclaimer:** Provided "as is" strictly for technical benchmarking, independent evaluation, and research under Apache-2.0.
