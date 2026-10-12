@@ -74,7 +74,7 @@ def main():
     args = parser.parse_args()
 
     print("=" * 65)
-    print("  ⏱️  SAMI OMNI TELEMETRY BENCHMARK")
+    print("  [BENCHMARK] SAMI Omni Hardware Telemetry")
     print(f"  Target: {args.url}")
     print("=" * 65)
 
@@ -94,7 +94,7 @@ def main():
     avg_speed = sum(r["tok_per_sec"] for r in results) / len(results)
 
     print("\n" + "=" * 65)
-    print("  📊 SUMMARY RESULTS")
+    print("  [SUMMARY] Latency & Throughput Metrics")
     print("=" * 65)
     print(f"  Average Time-To-First-Token (TTFT): {avg_ttft:.2f} seconds")
     print(f"  Average Generation Throughput:       {avg_speed:.1f} tokens/second")
