@@ -2,10 +2,6 @@
 
 **Asymmetric MoE Topology and Memory-Decoupled Multimodal Inference for Consumer Hardware**
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23293547-blue)](https://doi.org/10.5281/zenodo.23293547)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Model%20Weights-yellow)](https://huggingface.co/MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ)
-
 ---
 
 ## Overview
@@ -13,9 +9,6 @@
 SAMI Omni describes an asymmetric memory-partitioning topology designed to evaluate 30B+ sparse Mixture-of-Experts (MoE) multimodal models on consumer hardware (6GB VRAM GPUs paired with 32GB system RAM). 
 
 By decoupling dense attention mechanisms from sparse expert execution, the architecture achieves 15.5 – 16.0 tokens/second sustained throughput without GPU memory overflow.
-
-* **Technical Report:** [doi.org/10.5281/zenodo.23293547](https://doi.org/10.5281/zenodo.23293547)
-* **Model Checkpoints:** [MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ](https://huggingface.co/MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ)
 
 ---
 
@@ -106,6 +99,8 @@ Evaluation against the unpruned base model confirms that surgical column ablatio
 
 ### 1. Download Weights
 
+Pre-quantized model weights and vision projector artifacts are hosted on Hugging Face at [`MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ`](https://huggingface.co/MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ):
+
 ```bash
 # Main AsymQ MoE checkpoint (14.8 GB)
 huggingface-cli download MIThridate/Qwen3-Omni-35B-A3B-SAMI-AsymQ \
@@ -153,6 +148,8 @@ This repository provides client execution scripts, telemetry instrumentation, an
 ---
 
 ## Citation
+
+The technical report describing the complete architectural proofs and telemetry is archived on Zenodo: [doi.org/10.5281/zenodo.23293547](https://doi.org/10.5281/zenodo.23293547).
 
 ```bibtex
 @techreport{spiridon2026sami,
